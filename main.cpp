@@ -56,45 +56,6 @@ void* send_resource_request(void*);
 void* send_release_request(void*);
 
 
-/*banker::banker()
-{
-    available[0]=10;
-    available[1]=5;
-    available[2]=7;
-    int limit;
-    
-    for(int i=0;i<NUMBER_OF_CUSTOMERS;i++)
-        for(int j=0;j<NUMBER_OF_RESOURCES;j++)
-            maximum[i][j]=rand()%available[j];
-    
-    for(int i=0;i<NUMBER_OF_CUSTOMERS;i++)
-        for(int j=0;j<NUMBER_OF_RESOURCES;j++)
-        {
-            
-            if(maximum[i][j]==0)
-            {
-                allocated[i][j]=0;
-                
-            }
-            
-            else
-            {
-                limit=rand()% maximum[i][j];
-                while(limit>=available[j])
-                {
-                    limit=rand()% maximum[i][j];
-                }
-                allocated[i][j]=limit;
-                available[j]-=allocated[i][j];
-            }
-        }
-    
-    for(int i=0;i<NUMBER_OF_CUSTOMERS;i++)
-        for(int j=0;j<NUMBER_OF_RESOURCES;j++)
-            need[i][j]=maximum[i][j]-allocated[i][j];
-}
- */
-
 banker::banker()
 {
     
